@@ -8,11 +8,11 @@ import '../models/homework.dart';
 
 class Api {
   static Future<List<Group>> getGroup() async {
-    print('dafd');
+    // print('dafd');
     Uri url = Uri(
       scheme: 'https',
       host: 'codeschoolhomeworkapi.pythonanywhere.com',
-      path: 'student/get-groups',
+      path: 'student/get-groups/',
     );
     http.Response response = await http.get(url);
 
@@ -31,7 +31,7 @@ class Api {
     Uri url = Uri(
         scheme: 'https',
         host: 'codeschoolhomeworkapi.pythonanywhere.com',
-        path: 'homework/get-homeworks/$id');
+        path: 'homework/get-homeworks/$id/');
     http.Response response = await http.get(url);
 
     List dataFromJson = jsonDecode(response.body);
@@ -48,7 +48,7 @@ class Api {
     Uri url = Uri(
         scheme: 'https',
         host: 'codeschoolhomeworkapi.pythonanywhere.com',
-        path: 'homework/get-results/$groupId/$homeworkId');
+        path: 'homework/get-results/$groupId/$homeworkId/');
 
     http.Response response = await http.get(url);
 

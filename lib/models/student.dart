@@ -10,13 +10,13 @@ class Student{
   factory Student.getStudent(Map data){
     
     int a = 0;
-    if(data['result'].runtimeType == List){
+   
       for (int i = 0; i < data['result'].length; i++) {
         if(data['result'][i]['is_solved']){
           a++;
         }
         // a += data['result'][i] as int;
-      }
+      
     }
     return Student( fullname: data['student'], result: data['result'],total: a,attempt: data['attempt']);
   }
