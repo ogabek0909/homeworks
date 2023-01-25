@@ -15,7 +15,7 @@ class Student{
         if(data['result'][i]['is_solved']){
           a++;
         }
-        // a += data['result'][i] as int;
+        
       
     }
     return Student( fullname: data['student'], result: data['result'],total: a,attempt: data['attempt']);
